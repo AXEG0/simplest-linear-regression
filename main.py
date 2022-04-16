@@ -1,21 +1,25 @@
-from sklearn.linear_model import LinearRegression
-from sklearn.metrics import mean_squared_error
-
 # First column is Years of experience
 # Second column is People in supervision
-x_data = [[2, 1],
-          [2, 0],
-          [3, 4]]
+X = [[2, 1],
+     [2, 0],
+     [3, 4]]
 
 # And this is the Salary
-y_data = [2, 1, 4]
+y = [2000,
+     1000,
+     4000]
 
 # Let's fit a Linear Regression model
-model = LinearRegression().fit(x_data, y_data)
+from sklearn.linear_model import LinearRegression
 
-# Here let's check the average model error value
-print("MSE:", mean_squared_error(y_data, model.predict(x_data)))
+model = LinearRegression().fit(X, y)
 
 # Finally, let's predict the salary with 5 Years of experience and 8 People in supervision
 prediction = model.predict([[5, 8]])
-print('Predicted response:', prediction)
+print('Prediction:', round(*prediction))
+
+# Here let's check the average model error value
+from sklearn.metrics import mean_absolute_error
+
+mae = round(mean_absolute_error(y, model.predict(X)), 10)
+print("Average error:", mae)
