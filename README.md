@@ -4,7 +4,7 @@ This parameters will weigh the salary prediction.
 And 1 list with a salary corresponding to this experience.
 
 ## Why:
-This code was prepered for this article: https://medium.com/@axegggl/become-a-novice-data-scientist-in-10-minutes-4739ba886e25
+This code was prepared for this article: https://medium.com/@axegggl/become-a-novice-data-scientist-in-10-minutes-4739ba886e25
 
 -------------------------------------------------------------------------------
 
